@@ -1,0 +1,14 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-3">Create New Post</h3>
+<form method="POST"> {% csrf_token %}
+<div class="card">
+ 
+   {{form.as_p}}
+  
+<input type='submit' value='Save' class="btn">
+  
+<a href="/posts" class="btn">Go Back</a>
+</form>
+{% endblock %} 

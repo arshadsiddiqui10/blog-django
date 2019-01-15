@@ -1,0 +1,23 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-3">{{title}}</h3>
+<div class="card">
+  <div class="card-content">
+    {% if title is not None%}
+    {{title}} {% else %}
+    title coming soon
+    {% endif %}
+  </div>
+  <div class="card-content">
+    {% if name is not None%}
+    {{name}} {% else %}
+    name coming soon
+    {% endif %}
+  </div>
+  <div class="card-action">
+    {{body}}
+  </div>
+</div>
+<a href="/posts" class="btn">Go Back</a>
+{% endblock %}
